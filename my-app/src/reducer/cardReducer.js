@@ -26,6 +26,12 @@ export const reducer = (state = initialState, action) => {
         cards: action.payload,
         error: ""
       };
+    case FETCHING_POKEMON_DATA_FAILURE:
+      return {
+        ...state,
+        isLoading: true,
+        error: "SERVER ERROR, WAIT FOR IT"
+      };
     default:
       return state;
   }

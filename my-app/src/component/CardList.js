@@ -7,18 +7,15 @@ import { getData } from "../actions";
 const CardList = props => {
   return (
     <>
-      <h1>Welcome to PokeCard Game</h1>
-      <button onClick={props.getData}>
-        {props.isLoading ? (
-          <Loader type="Hearts" color="red" height="10" width="150" />
-        ) : (
-          "Get Cards"
-        )}
+      <h1>Welcome to PokeCard</h1>
+      <button className="btn-primary" onClick={props.getData}>
+        {props.isLoading ? <Loader type="Hearts" /> : "Get Cards"}
       </button>
-      {props.cards.map(card => (
-        <Card key={card.id} card={card} />
-      ))}
-      {/* {console.log("CARD TESTING RESULT", props.cards.cards)} */}
+      <div className="cardList">
+        {props.cards.map(card => (
+          <Card key={card.id} card={card} />
+        ))}
+      </div>
     </>
   );
 };
