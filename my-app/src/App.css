@@ -1,0 +1,32 @@
+.App {
+  text-align: center;
+  background-color: #eeeeee;
+  height: 100vh;
+}
+
+h1 {
+  text-transform: uppercase;
+  padding-top: 2rem;
+}
+
+.btn-primary {
+  width: 10rem;
+  padding: 1rem;
+  background: none;
+  border: #173f5f solid 0.15rem;
+  border-radius: 1rem;
+}
+
+.cardList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  width: 30%;
+}
+
+.card h3 {
+  text-transform: uppercase;
+}
